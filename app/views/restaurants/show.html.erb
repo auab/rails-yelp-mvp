@@ -7,14 +7,19 @@
   <p class='restaurant-details restaurant-address'>
       <i class="fa-solid fa-map-location"></i> <%= @restaurant.address %></em>
   </p>
-
   <hr>
   <ul>
     <% @restaurant.reviews.each do |review| %>
     <li class='mb-5 card-review'>
-    <p><strong><% review.rating.times do%>
-      <i class="fa-solid fa-star"></i>
-     <% end %></strong></p>
+    <p>
+      <% review.rating.times do%>
+        <i class="fa-solid fa-star"></i>
+      <% end %>
+      <% (5 - review.rating).times do%>
+        <i class="fa-regular fa-star"></i>
+      <% end %>
+
+     </p>
 
       <%= review.content %>
     </li>

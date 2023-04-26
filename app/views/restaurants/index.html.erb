@@ -1,7 +1,17 @@
 
 
 <div class='container index-restaurant'>
+
   <ul>
+    <li class='card-add-restaurant mb-3 p-1'>
+        <%= link_to new_restaurant_path, class:'link-add-restaurant' do%>
+          <h4>
+            <i class="fa-solid fa-circle-plus"></i>
+            <%= "Add a Restaurant"%>
+          </h4>
+        <% end %>
+    </li>
+
     <% @restaurants.each do |restaurant| %>
     <li class='mb-4 card card-restaurant p-3'>
       <h2> <%= link_to restaurant.name, restaurant_path(restaurant), class:'card-restaurant-name' %></h2>

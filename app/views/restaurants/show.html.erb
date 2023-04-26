@@ -9,6 +9,14 @@
   </p>
   <hr>
   <ul>
+    <li class='card-add-review mb-3'>
+      <%= link_to new_restaurant_review_path(@restaurant), class:'link-add-restaurant' do%>
+        <h4>
+          <i class="fa-solid fa-circle-plus"></i>
+          <%= "Add a Review"%>
+        </h4>
+      <% end %>
+    </li>
     <% @restaurant.reviews.each do |review| %>
     <li class='mb-5 card-review'>
     <p>

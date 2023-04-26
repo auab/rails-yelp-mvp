@@ -1,0 +1,23 @@
+<div class='container show-restaurant'>
+  <h1><%= @restaurant.name %></h1>
+  <p class='restaurant-details'>
+    <i class="fa-solid fa-phone"></i> <%= @restaurant.phone_number %> |
+    <em><%= @restaurant.category.capitalize %> Food</em>
+  </p>
+  <p class='restaurant-details restaurant-address'>
+      <i class="fa-solid fa-map-location"></i> <%= @restaurant.address %></em>
+  </p>
+
+  <hr>
+  <ul>
+    <% @restaurant.reviews.each do |review| %>
+    <li class='mb-5 card-review'>
+    <p><strong><% review.rating.times do%>
+      <i class="fa-solid fa-star"></i>
+     <% end %></strong></p>
+
+      <%= review.content %>
+    </li>
+    <% end %>
+  </ul>
+</div>

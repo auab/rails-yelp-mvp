@@ -1,0 +1,16 @@
+// Specific CSS for your home-page
+body{
+  background-color: $sand-color;
+}
+.nav{
+  background-color: $light-red;
+}
+.item-logo{
+  display: flex;
+  .name-logo{
+    font-family: 'Courgette', cursive;
+    font-size: 30px;
+    color: $salmon-color;
+    text-decoration: none;
+  }
+}

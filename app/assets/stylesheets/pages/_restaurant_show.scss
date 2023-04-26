@@ -1,0 +1,16 @@
+.show-restaurant{
+  ul{
+    list-style-type: none;
+  }
+  h1{
+    font-family:  'Courgette', cursive;
+    color: $light-red;
+  }
+  .restaurant-details{
+    color: $peach-color;
+  }
+  .restaurant-address{
+    font-size: smaller;
+  }
+
+}

@@ -1,0 +1,15 @@
+
+
+<div class='container index-restaurant'>
+  <ul>
+    <% @restaurants.each do |restaurant| %>
+    <li class='mb-4 card card-restaurant p-3'>
+      <h2> <%= link_to restaurant.name, restaurant_path(restaurant), class:'card-restaurant-name' %></h2>
+      <p> <em><%= restaurant.category.capitalize %> Food</em></p>
+
+
+    </li>
+
+    <% end %>
+  </ul>
+</div>
